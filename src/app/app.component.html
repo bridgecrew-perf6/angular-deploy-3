@@ -1,0 +1,40 @@
+
+
+
+  <div class="container"  [ngStyle]="{backgroundColor:'var(--purple-100)'}">
+
+    <div class="row mb-3 mt-3 p-4 " [ngStyle]="{backgroundColor:'var(--indigo-900)'}">
+        <div class="col-md-9">
+            <h3 class="text-white mx-auto">Crud Application</h3>
+        </div>
+        <div class="col-md-3">
+            <button type="button" (click)="addData()" pButton type="button" class="d-flex justify-content-end" [ngStyle]="{backgroundColor:'var(--pink-600)'}">Add data</button>
+        </div>
+       
+    </div>
+   <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex">
+    
+      
+        <ul class="navbar-nav list-unstyled ">
+          <li class="nav-item">
+           <button pButton type="button" [ngStyle]="{backgroundColor:'var(--pink-800)'}"> <a class="btn btn-link active text-white text-decoration-none" routerLink="get">GetData</a></button>
+          </li> 
+          <!-- <li class="nav-item">
+            <a class="btn btn-link" routerLink="post">InsertData</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-link" routerLink="put">Update</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-link " routerLink="delete" >Delete</a>
+          </li> --> 
+        </ul>
+    
+  
+  </nav>
+</div>
+
+
+
+
+<router-outlet></router-outlet>

@@ -1,0 +1,40 @@
+<div class="container mt-0"  [ngStyle]="{backgroundColor:'var(--indigo-200)'}">
+<h3>This is crud application</h3>
+    <!-- <div class="row mb-3 mt-3 p-4 " [ngStyle]="{backgroundColor:'var(--indigo-900)'}">
+        <div class="col-md-9">
+            <h3 class="text-white mx-auto">Crud Application</h3>
+        </div>
+        <div class="col-md-3">
+            <button type="button" (click)="addData()" pButton type="button" class="d-flex justify-content-end" [ngStyle]="{backgroundColor:'var(--pink-600)'}">Add data</button>
+        </div>
+       
+    </div> -->
+
+    <div class="row ">
+        <div class="col-md-12">
+            <table class="table table-stripe">
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Emp Id</th>
+                    <th>Branch</th>
+                    <th>Role</th>
+                    <th>edit</th>
+                    <th>delete</th>
+                </tr>
+                <tr *ngFor="let dt of user">
+                    <td>{{dt.id}}</td>
+                    <td>{{dt.name}}</td>
+                    <td>{{dt.age}}</td>
+                    <td>{{dt.empId}}</td>
+                    <td>{{dt.branch}}</td>
+                    <td>{{dt.role}}</td>
+                    <td><button type="button" (click)="onEdit(dt.id,dt)"  [ngStyle]="{backgroundColor:'var(--cyan-500)'}" class="btn btn-info">Edit</button></td>
+                    <td><button type="button" (click)="onDelete(dt.id)" [ngStyle]="{backgroundColor:'var(--red-500)'}" class="btn btn-danger text-dark">Delete</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+   
+</div>
